@@ -283,8 +283,8 @@ class DownloadData:
                     page = requests.get(page_url)
                     page_parser = BeautifulSoup(page.content, "html.parser")
 
-                print("Visited", i - 1, "pages of Gross sub-collection")
-                print("Extracted", image_sum, "image-caption pairs from the",
-                      category_soup.find("li", class_="selected").find("a").get_text(), "category")
-                return image_captions, image_tags
+        print("Visited", i - 1, "pages of Gross sub-collection")
+        print("Extracted", image_sum, "image-caption pairs from the",
+                category_soup.find("li", class_="selected").find("a").get_text(), "category")
+        return image_captions, image_tags
 
